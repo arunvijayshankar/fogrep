@@ -53,7 +53,7 @@ impl Config {
 
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
         //let case_sensitive = false; 
-        println!("CASE_SENSITIVE is: {}", case_sensitive);
+        //println!("CASE_SENSITIVE is: {}", case_sensitive);
 
         Ok(Config { 
             query, 
