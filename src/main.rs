@@ -3,10 +3,9 @@ use std::process;
 use fogrep::Config;
 
 fn main() {
-    let args: Vec<String> = env::args().collect(); // init vector to hold cmd line args
 
     // function to parse cmd line args for config variables
-    let config = Config::new(&args).unwrap_or_else(|err| {
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
         eprintln!("Problem parsing arguments: {}", err);
         process::exit(1);
     });
